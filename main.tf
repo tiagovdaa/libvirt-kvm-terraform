@@ -22,6 +22,7 @@ resource "libvirt_volume" "vm_disks" {
   base_volume_id = libvirt_volume.base_images[count.index % length(libvirt_volume.base_images)].id
   pool           = var.vm_pool
   format         = "qcow2"
+  size           = var.disk_size  # Set disk size based on the variabl
 }
 
 resource "libvirt_domain" "vm" {

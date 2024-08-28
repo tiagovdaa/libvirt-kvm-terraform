@@ -60,3 +60,9 @@ variable "network_name" {
   type        = string
   description = "Name of the network to attach the VMs to"
 }
+
+# VM disk size in MB
+variable "disk_size" {
+  type        = number
+  description = "Size of the VM disk in MB"
+}
