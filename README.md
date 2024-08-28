@@ -1,6 +1,5 @@
-# libvirt-kvm-terraform
-Using Terraform to Provision VMs on Libvirt (KVM)
 # Terraform Libvirt (kvm) Deployment
+Using Terraform to Provision VMs on Libvirt (KVM)
 
 This project uses Terraform to deploy multiple virtual machines (VMs) on a Libvirt hypervisor, utilizing Cloud-Init for initial configuration. The setup is fully parameterized, allowing you to specify the number of VMs, base images, and storage pools. 
 
@@ -27,6 +26,10 @@ Before you begin, ensure that your system meets the following requirements:
 
 3. **Terraform Installed**:
    - Install Terraform by following the instructions [here](https://learn.hashicorp.com/tutorials/terraform/install-cli).
+
+**NOTE**
+
+Since there are no official provider for libvirt, I'm using this one [here](https://registry.terraform.io/providers/dmacvicar/libvirt/latest/docs) and there are some limitations regarding features.
 
 ## Project Structure
 
@@ -129,4 +132,5 @@ Confirm the destruction by typing `yes` when prompted.
 ---
 
 Created with ❤️ and Debian Linux.
-Tiago Almeida 🇧🇷🇵🇹
+
+by Tiago Almeida 🇧🇷🇵🇹
